@@ -17,7 +17,7 @@ GET http://localhost:8000/api/v1/memories/63c7215e056cbbf87f8bcf16
 
 ###
 
-DELETE  http://localhost:8000/api/v1/memories/63c7215e056cbbf87f8bcf16
+DELETE  http://localhost:8000/api/v1/memories/63c6a101229612c0e1543429
 
 ###
 
@@ -25,7 +25,7 @@ PATCH http://localhost:8000/api/v1/memories/63c6c91ec97b72200fe4e5b5
 Content-Type: application/json
 
 {
-    "name": "Trisha D",
+    "name": "Trisha",
     "description": "WDV1",
     "message": "Testing"
 }
