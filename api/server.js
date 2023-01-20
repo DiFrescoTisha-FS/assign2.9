@@ -12,10 +12,10 @@ const PORT = process.env.PORT || 8000;
 
 const memoryRouter = require('./routes/memories')
 
-const DATABASE_URL = process.env.DATABASE_URL;
+const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 
 mongoose.set('strictQuery', false);
-mongoose.connect(DATABASE_URL, {})
+mongoose.connect(REACT_APP_BASE_URL, {})
 const db = mongoose.connection;
 db.on('error', error => console.error(error));
 db.once('open', () => console.log('Database Connection Established'));
