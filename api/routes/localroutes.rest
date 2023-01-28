@@ -6,14 +6,14 @@ POST http://localhost:8000/api/v1/memories
 Content-Type: application/json
 
 {
-    "name": "Lake Julian",
+    "name": "Lake h",
     "description": "Boat ride",
     "message": "Family Fun"
 }
 
 ###
 
-GET http://localhost:8000/api/v1/memories/63c7215e056cbbf87f8bcf16
+GET http://localhost:8000/api/v1/memories/63d53f14e735b0f874a8a10b
 
 ###
 
@@ -21,11 +21,11 @@ DELETE  http://localhost:8000/api/v1/memories/63c6a101229612c0e1543429
 
 ###
 
-PATCH http://localhost:8000/api/v1/memories/63c6c91ec97b72200fe4e5b5
+PATCH http://localhost:8000/api/v1/memories/63d53f14e735b0f874a8a10b
 Content-Type: application/json
 
 {
-    "name": "Trisha",
+    "name": "Tisha",
     "description": "WDV1",
     "message": "Testing"
 }
