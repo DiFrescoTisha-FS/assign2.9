@@ -73,7 +73,7 @@ function Memory() {
         try {
             await fetch(`${API_BASE}/memories/${id}`, {
                 method: 'PATCH',
-                Header: {
+                headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(values)
