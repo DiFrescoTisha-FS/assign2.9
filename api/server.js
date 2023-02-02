@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 8000;
 
 const memoryRouter = require('./routes/memories')
 
+
 const DATABASE_URL = process.env.DATABASE_URL;
 
 mongoose.set('strictQuery', false);
@@ -22,6 +23,7 @@ db.once('open', () => console.log('Database Connection Established'));
 
 app.use(express.json())
 app.use('/api/v1/memories', memoryRouter);
+
 
 app.use(express.static(path.join(__dirname, '../reactjs/build')));
 
