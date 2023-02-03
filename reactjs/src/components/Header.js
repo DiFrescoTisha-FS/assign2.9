@@ -58,7 +58,7 @@ export default function Header() {
             className="uppercase hidden md:inline-flex text-sm space-x-1 cursor-pointer text-[#c0c0c0]"
             to="/"
           >
-            <FaHome size="20" />
+            <FaHome size="20" className="text-[#c0c0c0]" />
             &nbsp; Home
           </Link>
         </div>
@@ -67,7 +67,7 @@ export default function Header() {
             to="/dashboard"
             className="uppercase hidden md:inline-flex text-sm space-x-1 cursor-pointer text-[#c0c0c0]"
           >
-            <AiFillDashboard size="20" />
+            <AiFillDashboard size="20" className="text-[#c0c0c0]" />
             &nbsp;Dashboard
           </Link>
         </div>
