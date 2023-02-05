@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+import AuthService from "../services/auth.service";
+import MemoriesService from "../services/memories.service";
 import "../App.css";
 
 function Dashboard() {
@@ -12,7 +15,9 @@ function Dashboard() {
     name: "",
     description: "",
     message: "",
-  });
+  })
+
+  const navigate = useNavigate();
 
   const API_BASE =
     process.env.NODE_ENV === "development"
@@ -21,6 +26,19 @@ function Dashboard() {
 
   let ignore = false;
   useEffect(() => {
+    MemoriesService.getAllPrivateMemories().then(
+      response => {
+        setMemories(response.data)
+      },
+      (error) => {
+        console.log("Secured Page Error: ", error.response) 
+          if(error.response && error.response.status === 403)  {
+             AuthService.logout()
+             navigate('/login')
+          }        
+        }
+    )
+    
     if (!ignore) {
       getMemories();
     }
