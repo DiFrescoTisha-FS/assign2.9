@@ -5,7 +5,7 @@ import '../App.css';
 function Memory() {
   const [memories, setMemories] = useState(null)
   const [loading, setLoading] = useState(null)
-    const [error, setError] = useState(null)
+  const [error, setError] = useState(null)
     
     const [values, setValues] = useState({
         name: '',
