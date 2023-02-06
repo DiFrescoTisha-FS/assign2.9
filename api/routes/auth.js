@@ -8,7 +8,7 @@ const router = express.Router();
 
 const AuthenticationController = require("../controllers/authentication_controller");
 
-router.post('/signup', AuthenticationController.signup)
+router.post('/', AuthenticationController.signup)
 router.post('/signin', requireLogin, AuthenticationController.signin)
 
 
